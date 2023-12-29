@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Unity;
+using UnityEngine.Events;
 
 public class Manager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Manager : MonoBehaviour
     public TimerManager timerManager;
     public SceneChanger sceneChanger;
     public UIManager uiManager;
+
+    public int roundCount;
 
     public bool isStart;
     public bool isOver;
@@ -36,7 +39,8 @@ public class Manager : MonoBehaviour
 
     private void Init()
     {
-        NextGame("Test2", 10f);
+        roundCount = 0;
+        GameStart();
     }
 
     private void UpdateManagers()
@@ -45,14 +49,26 @@ public class Manager : MonoBehaviour
 
         timerManager.UpdateTimer();
         uiManager.UpdateImage(timerManager.timer, timerManager.maxTime);
-
     }
+
+    public void GameStart()
+    {
+
+        NextGame("Test2", 10f);
+    }
+
+
 
     public void NextGame(string name, float time)
     {
         sceneChanger.SceneLoad(name);
         timerManager.StartTimer(time);
         isStart = true;
+    }
+
+    public void GameClear(UnityEvent _event)
+    {
+        _event.Invoke();
     }
 
     public void GameOver()

@@ -12,4 +12,19 @@ public class UIManager : MonoBehaviour
     {
         timer_fill.fillAmount = time / maxTime;
     }
+
+    public void RoundClear()
+    {
+
+    }
+
+    public void RoundStart()
+    {
+
+    }
+
+    public void RoundEnd()
+    {
+
+    }
 }
