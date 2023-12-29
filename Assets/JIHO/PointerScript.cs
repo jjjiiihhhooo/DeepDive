@@ -8,6 +8,9 @@ public class PointerScript : MonoBehaviour, IPointerClickHandler, IDragHandler
 {
     public UnityEvent _event;
 
+
+    public int toothCount = 3; 
+
     public void OnDrag(PointerEventData eventData)
     {
         
@@ -17,6 +20,20 @@ public class PointerScript : MonoBehaviour, IPointerClickHandler, IDragHandler
     {
         
     }
+    public void OnMouseDown()
+    {
+        _event.Invoke();
+    }
 
+    public void Tooth()
+    {
+        if(toothCount > 0)
+            toothCount--;   
+    }
 
+    public void Toutle()
+    {
+        TurtleMovemont turtleMovemont = GetComponent<TurtleMovemont>();
+        turtleMovemont.SpeedUpTurtle();
+    }
 }
