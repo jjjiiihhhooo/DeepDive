@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/JIHO/Test.unity
+    guid: 87785861ccaefd443802f9840e35f36f
+  - enabled: 1
+    path: Assets/JIHO/Test2.unity
+    guid: 1a4ed0558a5305f45b70e1804377f877
   m_configObjects: {}
