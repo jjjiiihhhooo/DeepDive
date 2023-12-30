@@ -198,6 +198,7 @@ public class PointerScript : MonoBehaviour
 
     public void CokeClearEvent()
     {
+        Manager.Instance.soundManager.Play(Manager.Instance.soundManager.audioDictionary["Coke"], false);
         cokeEffect[0].Stop();
         cokeEffect[1].Stop();
         animator.SetTrigger("Clear");

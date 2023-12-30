@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -348,9 +348,9 @@ MonoBehaviour:
     _overEvent:
       m_PersistentCalls:
         m_Calls: []
-  - name: SantaNoCry
+  - name: BottleCap
     type: "\uBE7C\uB77C"
-    timer: 20
+    timer: 10
     clearTimer: 3
     _clearEvent:
       m_PersistentCalls:
@@ -360,7 +360,7 @@ MonoBehaviour:
         m_Calls: []
   - name: ToothPick
     type: "\uBE7C\uB77C"
-    timer: 20
+    timer: 10
     clearTimer: 3
     _clearEvent:
       m_PersistentCalls:
@@ -370,7 +370,137 @@ MonoBehaviour:
         m_Calls: []
   - name: PineapplePizza
     type: "\uBE7C\uB77C"
+    timer: 10
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: BulbRemove
+    type: "\uBE7C\uB77C"
+    timer: 10
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: CrossCouple
+    type: "\uBE60\uC838\uB77C"
+    timer: 5
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: DiveMan
+    type: "\uBE60\uD2B8\uB824\uB77C"
+    timer: 8
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: HairRemove
+    type: "\uBE7C\uB77C"
+    timer: 8
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Jenga
+    type: "\uBE7C\uB77C"
+    timer: 8
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: PptName
+    type: "\uBE7C\uB77C"
+    timer: 10
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: PlugPull
+    type: "\uBE7C\uB77C"
+    timer: 8
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: ToothRemove
+    type: "\uBE7C\uB77C"
     timer: 20
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: TurtleAccel
+    type: "\uBE60\uD2B8\uB824\uB77C"
+    timer: 20
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: CoolMan
+    type: "\uBE60\uD2B8\uB824\uB77C"
+    timer: 8
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: FakeText
+    type: "\uBE7C\uB77C"
+    timer: 10
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: RedCarpet
+    type: "\uBE60\uC838\uB77C"
+    timer: 5
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: HiddenPlug
+    type: "\uBE7C\uB77C"
+    timer: 10
     clearTimer: 3
     _clearEvent:
       m_PersistentCalls:
@@ -1138,6 +1268,12 @@ MonoBehaviour:
     audioName: MainBGM
   - audio: {fileID: 8300000, guid: 81b8040973ba4c4428f6d192e1a0831f, type: 3}
     audioName: DiveWater
+  - audio: {fileID: 8300000, guid: 81d564a1e8517df45b91b9df3e99d042, type: 3}
+    audioName: Clear
+  - audio: {fileID: 8300000, guid: 72773292a7742a046bcf02000e0df073, type: 3}
+    audioName: Fail
+  - audio: {fileID: 8300000, guid: 389daad81e684194787cb88dd045b9bb, type: 3}
+    audioName: Coke
   audioSources:
   - {fileID: 1961590849}
   - {fileID: 332395105}
@@ -2008,7 +2144,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -123,6 +123,7 @@ public class Manager : MonoBehaviour
 
     public void GameClear()
     {
+        soundManager.Play(soundManager.audioDictionary["Clear"], false);
         isStart = false;
         sceneDatas[sceneIndex]._clearEvent?.Invoke();
         uiManager.RoundClear(sceneDatas[sceneIndex].clearTimer);
@@ -135,6 +136,7 @@ public class Manager : MonoBehaviour
 
     public void RoundOver()
     {
+        soundManager.Play(soundManager.audioDictionary["Fail"], false);
         isOver = true;
         isStart = false;
         
