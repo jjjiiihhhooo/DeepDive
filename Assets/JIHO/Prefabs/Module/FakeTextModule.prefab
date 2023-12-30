@@ -266,6 +266,12 @@ MonoBehaviour:
   beforeCoke: {fileID: 0}
   afterCoke: {fileID: 0}
   fakeText: {fileID: 141516879254409733}
+  bulbLight: {fileID: 0}
+  plugs: []
+  hairs: []
+  jengas: []
+  ppt_j: {fileID: 0}
+  ppt_back: {fileID: 0}
   cokeEffect: []
   coolManEffect: {fileID: 0}
   test: 0

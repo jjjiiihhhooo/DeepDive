@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Tooth : MonoBehaviour
 {
-    [SerializeField] Animation animation;
     public BoxCollider boxCollider;
 
     Rigidbody body;

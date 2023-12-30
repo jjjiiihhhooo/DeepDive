@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using Unity;
 using UnityEngine.Events;
-using TMPro.EditorUtilities;
 using UnityEngine.SceneManagement;
 
 [System.Serializable]
@@ -26,6 +21,7 @@ public class Manager : MonoBehaviour
     public TimerManager timerManager;
     public SceneChanger sceneChanger;
     public UIManager uiManager;
+    public SoundManager soundManager;
 
     public int roundCount = 1;
     public int sceneIndex = -1;

@@ -15298,6 +15298,10 @@ MonoBehaviour:
   fakeText: {fileID: 0}
   bulbLight: {fileID: 0}
   plugs: []
+  hairs: []
+  jengas: []
+  ppt_j: {fileID: 0}
+  ppt_back: {fileID: 0}
   cokeEffect:
   - {fileID: 3173053188359636218}
   - {fileID: 2806632384484280232}
