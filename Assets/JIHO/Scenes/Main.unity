@@ -203,7 +203,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &135904599
 RectTransform:
@@ -387,7 +387,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - name: TurtleAccel
-    type: 
+    type: "\uBE60\uD2B8\uB824\uB77C"
     timer: 20
     clearTimer: 3
     _clearEvent:
@@ -397,7 +397,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - name: ToothRemove
-    type: 
+    type: "\uBE7C\uB77C"
     timer: 20
     clearTimer: 3
     _clearEvent:
@@ -407,7 +407,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - name: SantaGift
-    type: 
+    type: "\uBE60\uD2B8\uB824\uB77C"
     timer: 20
     clearTimer: 3
     _clearEvent:
@@ -437,6 +437,26 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - name: PlugPull
+    type: "\uBE7C\uB77C"
+    timer: 20
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Jenga
+    type: "\uBE7C\uB77C"
+    timer: 20
+    clearTimer: 3
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: PptName
     type: "\uBE7C\uB77C"
     timer: 20
     clearTimer: 3

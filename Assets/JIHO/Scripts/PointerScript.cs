@@ -27,6 +27,9 @@ public class PointerScript : MonoBehaviour
     public GameObject fakeText;
     public GameObject bulbLight;
     public GameObject[] plugs;
+    public GameObject[] jengas;
+    public GameObject ppt_j;
+    public GameObject ppt_back;
     public ParticleSystem[] cokeEffect;
     public ParticleSystem coolManEffect;
 
@@ -521,7 +524,140 @@ public class PointerScript : MonoBehaviour
     }
 
     ////////////////////////////////////////
+    public void HiddenPlug()
+    {
+        if (startPos == Vector3.zero) startPos = Input.mousePosition;
 
+        Vector3 tempPos = Input.mousePosition;
+
+        if (Vector3.Distance(startPos, tempPos) > 100f)
+        {
+            PlugPullClear();
+        }
+        else if (Vector3.Distance(startPos, tempPos) > 50f && !plugs[1].activeSelf)
+        {
+            plugs[0].SetActive(false);
+            plugs[1].SetActive(true);
+        }
+
+    }
+
+    public void HiddenPlugClear()
+    {
+        Manager.Instance.GameClear();
+    }
+
+    public void HiddenPlugClearEvent()
+    {
+        plugs[1].SetActive(false);
+        plugs[2].SetActive(true);
+        plugs[2].GetComponent<Rigidbody>().useGravity = true;
+    }
+
+    public void HiddenPlugOver()
+    {
+        Manager.Instance.RoundOver();
+    }
+
+    public void HiddenPlugOverEvent()
+    {
+
+    }
+
+    ////////////////////////////////////////
+
+    public void Jenga()
+    {
+        if (startPos == Vector3.zero) startPos = transform.position;
+
+        float distance = Camera.main.WorldToScreenPoint(transform.position).z;
+
+        Vector3 mousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
+        Vector3 objPos = Camera.main.ScreenToWorldPoint(mousePos);
+
+        transform.position = new Vector3(objPos.x, transform.position.y, transform.position.z);
+
+        if (Vector3.Distance(transform.position, startPos) > 10f)
+        {
+            CrossCoupleClear();
+        }
+
+    }
+
+    public void JengaClear()
+    {
+        Manager.Instance.GameClear();
+    }
+
+    public void JengaClearEvent()
+    {
+        for(int i = 0; i < jengas.Length; i++)
+        {
+            jengas[i].GetComponent<Rigidbody>().useGravity = true;
+        }
+    }
+
+    public void JengaOver()
+    {
+        Manager.Instance.RoundOver();
+    }
+
+    public void JengaOverEvent()
+    {
+
+    }
+
+    ////////////////////////////////////////
+
+    public void PptName()
+    {
+        if (startPos == Vector3.zero) startPos = ppt_j.transform.position;
+
+        float distance = Camera.main.WorldToScreenPoint(ppt_j.transform.position).z;
+
+        Vector3 mousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
+        Vector3 objPos = Camera.main.ScreenToWorldPoint(mousePos);
+        objPos.z = 0.06f;
+        ppt_j.transform.position = objPos;
+
+        if (Vector3.Distance(startPos, ppt_j.transform.position) > 8f)
+        {
+            PptNameClear();
+        }
+    }
+
+    public void PptNameClear()
+    {
+        Manager.Instance.GameClear();
+    }
+
+    public void PptNameClearEvent()
+    {
+        ppt_j.SetActive(false);
+        StartCoroutine(PptCor());
+    }
+
+    private IEnumerator PptCor()
+    {
+        Vector3 target = new Vector3(0f, -1.7f, -5.4f);
+        float time = 5f;
+        while(ppt_back.transform.position != target || time > 0f)
+        {
+            time -= Time.deltaTime;
+            ppt_back.transform.position = Vector3.MoveTowards(ppt_back.transform.position, target, 0.2f);
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    public void PptNameOver()
+    {
+        Manager.Instance.RoundOver();
+    }
+
+    public void PptNameOverEvent()
+    {
+
+    }
 }
 
 
