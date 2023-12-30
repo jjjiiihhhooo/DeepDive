@@ -1,0 +1,128 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using Unity;
+using UnityEngine.Events;
+using TMPro.EditorUtilities;
+
+[System.Serializable]
+public class SceneData
+{
+    [SerializeField] public string name;
+    [SerializeField] public float timer;
+    [SerializeField] public float clearTimer;
+    [SerializeField] public UnityEvent _clearEvent;
+    [SerializeField] public UnityEvent _overEvent;
+}
+
+
+public class Manager : MonoBehaviour
+{
+    public static Manager Instance;
+    
+    public TimerManager timerManager;
+    public SceneChanger sceneChanger;
+    public UIManager uiManager;
+
+    public int roundCount = 1;
+    public int sceneIndex = -1;
+    public int lifeCount = 3;
+
+    public string tempSceneName = "Test2";
+    public float tempTimer = 10f;
+
+    public SceneData[] sceneDatas;
+
+    public bool isStart;
+    public bool isOver;
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+            Init();
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        UpdateManagers();
+    }
+
+    private void Init()
+    {
+        ListShuffle();
+        roundCount = 0;
+        //GameStart();
+    }
+
+    private void ListShuffle()
+    {
+        for(int i = 0; i < sceneDatas.Length; i++)
+        {
+            System.Random ran = new System.Random();
+            int randomValue = ran.Next(0, sceneDatas.Length);
+            SceneData temp = sceneDatas[i];
+            sceneDatas[i] = sceneDatas[randomValue];
+            sceneDatas[randomValue] = temp;
+        }
+    }
+
+    private void UpdateManagers()
+    {
+        if (!isStart || isOver) return; 
+
+        timerManager.UpdateTimer();
+        uiManager.UpdateImage(timerManager.timer, timerManager.maxTime);
+    }
+
+    public void GameStart() // firstStart
+    {
+        uiManager.firstStartButton_obj.SetActive(false);
+        uiManager.RoundEnd(0.5f);
+    }
+
+
+    public void NextGame()
+    {
+        roundCount++;
+        sceneIndex++;
+        sceneChanger.SceneLoad(sceneDatas[sceneIndex].name);
+        uiManager.RoundStart(2f);
+    }
+
+    public void RoundStart()
+    {
+        timerManager.StartTimer(sceneDatas[sceneIndex].timer);
+        isStart = true;
+        isOver = false;
+    }
+
+    public void GameClear()
+    {
+        isStart = false;
+        sceneDatas[sceneIndex]._clearEvent?.Invoke();
+        uiManager.RoundClear(sceneDatas[sceneIndex].clearTimer);
+    }
+
+    public void GameOver()
+    {
+        Debug.Log("GameOver");
+    }
+
+    public void RoundOver()
+    {
+        isOver = true;
+        isStart = false;
+
+        uiManager.RoundOver(sceneDatas[sceneIndex].clearTimer);
+        sceneDatas[sceneIndex]._overEvent?.Invoke();
+    }
+}

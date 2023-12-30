@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FailHair_2
+  m_Controller: {fileID: 9100000, guid: 1cdd3eb5698d95b4191d208f06f66392, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: e9ea32ba05d509946b2dfbbc30484c83, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 62bcb634943e5724da43d285ecbddbdc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d12afcc939e6ccb44a9ec15104aba557, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 135eb752a1286814ab976d9870b51b68, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7555f9556624c9c4a87901ef131e765d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7555f9556624c9c4a87901ef131e765d, type: 2}
