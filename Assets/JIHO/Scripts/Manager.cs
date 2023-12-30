@@ -5,11 +5,13 @@ using UnityEngine.UI;
 using Unity;
 using UnityEngine.Events;
 using TMPro.EditorUtilities;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class SceneData
 {
     [SerializeField] public string name;
+    [SerializeField] public string type;
     [SerializeField] public float timer;
     [SerializeField] public float clearTimer;
     [SerializeField] public UnityEvent _clearEvent;
@@ -94,6 +96,13 @@ public class Manager : MonoBehaviour
     {
         roundCount++;
         sceneIndex++;
+
+        if(sceneDatas.Length <= sceneIndex)
+        {
+            LastGameClear();
+            return;
+        }
+
         sceneChanger.SceneLoad(sceneDatas[sceneIndex].name);
         uiManager.RoundStart(2f);
     }
@@ -101,6 +110,10 @@ public class Manager : MonoBehaviour
     public void RoundStart()
     {
         timerManager.StartTimer(sceneDatas[sceneIndex].timer);
+        uiManager.typeText.text = sceneDatas[sceneIndex].type;
+
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name != "FakeText") uiManager.typeText.gameObject.SetActive(true);
         isStart = true;
         isOver = false;
     }
@@ -124,5 +137,10 @@ public class Manager : MonoBehaviour
 
         uiManager.RoundOver(sceneDatas[sceneIndex].clearTimer);
         sceneDatas[sceneIndex]._overEvent?.Invoke();
+    }
+
+    public void LastGameClear()
+    {
+
     }
 }

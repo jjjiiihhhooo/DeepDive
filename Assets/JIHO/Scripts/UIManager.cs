@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public Image timer_fill;
+    public TextMeshProUGUI typeText;
     public TextMeshProUGUI clearText;
     public TextMeshProUGUI roundText;
     public TextMeshProUGUI roundOverText;
@@ -22,6 +23,7 @@ public class UIManager : MonoBehaviour
 
     public void RoundClear(float delay) //clear motion
     {
+        typeText.gameObject.SetActive(false);
         clearText.gameObject.SetActive(true);
         RoundEnd(delay);
     }
@@ -66,6 +68,7 @@ public class UIManager : MonoBehaviour
 
     public void RoundOver(float delay)
     {
+        typeText.gameObject.SetActive(false);
         roundOverText.gameObject.SetActive(true);
         RoundEnd(delay);
     }

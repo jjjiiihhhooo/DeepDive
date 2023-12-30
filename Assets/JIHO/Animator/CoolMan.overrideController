@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CoolMan
+  m_Controller: {fileID: 9100000, guid: 97c8297341c794d439da4c1935a2e85a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 335afa680fd65c24689f4fbe3186825a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: df8cc29dd14f7bd47b11d321b97d90d8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6c75d89f77629e04c9ea4f5b36f9c3d2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6c75d89f77629e04c9ea4f5b36f9c3d2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a5439fc7db54fd142a58bd6d562d8434, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a5439fc7db54fd142a58bd6d562d8434, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 58d2b7e59b159a64caaf54569ae9f064, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 58d2b7e59b159a64caaf54569ae9f064, type: 2}

@@ -70,7 +70,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c8d431474ccea2c42905241792186ee5, type: 2}
+  m_Motion: {fileID: 7400000, guid: 58d2b7e59b159a64caaf54569ae9f064, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -96,7 +96,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: cb724108b46a7ca4eadd5d71d20e3a4b, type: 2}
+  m_Motion: {fileID: 7400000, guid: a5439fc7db54fd142a58bd6d562d8434, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -113,16 +113,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 9120891030708212748}
-    m_Position: {x: 490, y: 40, z: 0}
+    m_Position: {x: 500, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7178636809490016755}
-    m_Position: {x: 495, y: 125, z: 0}
+    m_Position: {x: 500, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3318900320078359227}
     m_Position: {x: 360, y: -50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -899096848503488617}
-    m_Position: {x: 620, y: -40, z: 0}
+    m_Position: {x: 630, y: -50, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -132,7 +132,7 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 7178636809490016755}
+  m_DefaultState: {fileID: 9120891030708212748}
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -147,19 +147,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Clear
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Fail
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -205,7 +205,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dive_idle
+  m_Name: DiveIdle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -219,7 +219,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 975dd11eb3c854f458229e7cd1a3d795, type: 2}
+  m_Motion: {fileID: 7400000, guid: 335afa680fd65c24689f4fbe3186825a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -232,7 +232,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dive_Swim
+  m_Name: Dive
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -247,7 +247,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 55daf7a68d0c8914d8ebc4a2e6712355, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6c75d89f77629e04c9ea4f5b36f9c3d2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
