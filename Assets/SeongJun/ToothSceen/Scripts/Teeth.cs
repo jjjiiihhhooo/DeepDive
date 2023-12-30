@@ -51,7 +51,7 @@ public class Teeth : MonoBehaviour
     public void RemoveTooth()
     {
         Max--;
-        if (Max <= 0)
+        if (Max <= 0 && !Manager.Instance.isOver)
             pointerScript.ToothClear();
     }
 }
