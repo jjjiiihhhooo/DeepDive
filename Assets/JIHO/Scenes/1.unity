@@ -203,7 +203,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &135904599
 RectTransform:
@@ -326,119 +326,9 @@ MonoBehaviour:
   tempSceneName: Test2
   tempTimer: 10
   sceneDatas:
-  - name: DiveMan
-    type: "\uBE60\uD2B8\uB824\uB77C"
-    timer: 10
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: HairRemove
-    type: "\uBE7C\uB77C"
-    timer: 10
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: CrossCouple
-    type: "\uBE60\uC838\uB77C"
-    timer: 10
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: BottleCap
-    type: "\uBE7C\uB77C"
-    timer: 10
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: CoolMan
-    type: "\uBE60\uD2B8\uB824\uB77C"
-    timer: 10
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: FakeText
-    type: "\uBE7C\uB77C"
-    timer: 10
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: TurtleAccel
-    type: 
-    timer: 20
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: ToothRemove
-    type: 
-    timer: 20
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: SantaGift
-    type: 
-    timer: 20
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: BulbRemove
-    type: "\uBE7C\uB77C"
-    timer: 20
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: RedCarpet
-    type: "\uBE60\uC838\uB77C"
-    timer: 20
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
   - name: PlugPull
     type: "\uBE7C\uB77C"
-    timer: 20
+    timer: 10
     clearTimer: 3
     _clearEvent:
       m_PersistentCalls:

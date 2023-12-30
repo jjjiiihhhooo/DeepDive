@@ -114,8 +114,15 @@ public class Manager : MonoBehaviour
 
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name != "FakeText") uiManager.typeText.gameObject.SetActive(true);
+        
         isStart = true;
         isOver = false;
+
+        if (scene.name == "PlugPull")
+        {
+            PointerScript pointer = FindObjectOfType<PointerScript>();
+            pointer.plugs[5].SetActive(true);
+        }
     }
 
     public void GameClear()
