@@ -348,16 +348,6 @@ MonoBehaviour:
     _overEvent:
       m_PersistentCalls:
         m_Calls: []
-  - name: SantaNoCry
-    type: "\uBE7C\uB77C"
-    timer: 20
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
   - name: ToothPick
     type: "\uBE7C\uB77C"
     timer: 20

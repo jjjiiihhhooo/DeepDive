@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class TurtleMovemont : MonoBehaviour
 {
+    [SerializeField] AudioClip move;
+
     public float Speed;
     public float UpSpeed;
     private Rigidbody TurtleRigidbody;
@@ -23,12 +26,14 @@ public class TurtleMovemont : MonoBehaviour
     {
         TurtleMovemont turtleMovemont = GetComponent<TurtleMovemont>();
         turtleMovemont.SpeedUpTurtle();
+
     }
 
     public void SpeedUpTurtle()
     {
         TurtleRigidbody.AddForce(0, 0, UpSpeed);
         Speed += UpSpeed;
+        Manager.Instance.soundManager.Play(move, false);
     }
 
 }

@@ -652,6 +652,7 @@ MonoBehaviour:
   fakeText: {fileID: 0}
   bulbLight: {fileID: 0}
   plugs: []
+  hairs: []
   jengas: []
   ppt_j: {fileID: 0}
   ppt_back: {fileID: 0}
@@ -2404,6 +2405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f67245067b086948992b870966951db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DropSFX: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   body: {fileID: 0}
   UpSpeed: 700
   Bag: {fileID: 184790262}

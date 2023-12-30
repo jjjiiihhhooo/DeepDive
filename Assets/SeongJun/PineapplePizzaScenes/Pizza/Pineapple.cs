@@ -20,6 +20,6 @@ public class Pineapple : MonoBehaviour
 
     private void OnDestroy()
     {
-        
+        Manager.Instance.soundManager.Play(Pine, false);
     }
 }

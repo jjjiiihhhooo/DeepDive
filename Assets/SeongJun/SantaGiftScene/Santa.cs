@@ -14,6 +14,7 @@ public class Santa : MonoBehaviour
     [SerializeField] List<GameObject> GiftList;
 
     [SerializeField] List<Chimney> ChimneyList;
+    [SerializeField] BoxCollider lineCor;
 
     float rotSpeed = 1000f;
     bool isMove = false;
@@ -70,14 +71,16 @@ public class Santa : MonoBehaviour
         if (other.gameObject.name.Equals("Floor"))
         {
             var box = GetComponent<BoxCollider>();  
-            box.enabled = false;    
-            if(transform.childCount < 4)
+            box.enabled = false;
+            
+            if (transform.childCount < 4)
             {
                 Manager.Instance.RoundOver();
                 body.AddForce(0, 0, 0);
             }
             else
             {
+                lineCor.enabled = false;
                 Manager.Instance.GameClear();
                 body.AddForce(0, 0, 0);
             }
@@ -101,7 +104,7 @@ public class Santa : MonoBehaviour
 
     public void DropGift()
     {
-
+        Manager.Instance.soundManager.Play(DropSFX, false);
         Instantiate(GiftList[Random.Range(0, GiftList.Count)], Bag.transform.position, Quaternion.identity);
     }
 }

@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Tooth : MonoBehaviour
 {
+    [SerializeField] AudioClip tooh;
+
+
     public BoxCollider boxCollider;
 
     Rigidbody body;
@@ -72,8 +75,8 @@ public class Tooth : MonoBehaviour
 
     public void Dead()
     {
-        
-        
+
+        Manager.Instance.soundManager.Play(tooh, false);
         teeth.RemoveTooth();
     }
 

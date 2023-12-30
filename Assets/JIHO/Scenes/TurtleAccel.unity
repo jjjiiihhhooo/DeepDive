@@ -936,6 +936,10 @@ MonoBehaviour:
   fakeText: {fileID: 0}
   bulbLight: {fileID: 0}
   plugs: []
+  hairs: []
+  jengas: []
+  ppt_j: {fileID: 0}
+  ppt_back: {fileID: 0}
   cokeEffect: []
   coolManEffect: {fileID: 0}
   test: 0
@@ -954,6 +958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6feb01d4cbe76f438c913ee30af5a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: {fileID: 8300000, guid: ad1aae635dcf5e9469bdfaa1c3874b8c, type: 3}
   Speed: 20
   UpSpeed: 500
 --- !u!1 &1570673413

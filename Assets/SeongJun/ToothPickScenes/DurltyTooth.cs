@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class DurltyTooth : MonoBehaviour
 {
+    [SerializeField] AudioClip Durlty;
     [SerializeField] Teeth teeth;
     public void OnMouseDrag()
     {
@@ -22,5 +24,9 @@ public class DurltyTooth : MonoBehaviour
     public void NoChose()
     {
         this.gameObject.SetActive(false);
+    }
+    private void OnDestroy()
+    {
+        Manager.Instance.soundManager.Play(Durlty, false);
     }
 }

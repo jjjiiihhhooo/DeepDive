@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1
@@ -815,7 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1
@@ -941,7 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1
@@ -1054,7 +1054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1
@@ -1412,7 +1412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1
@@ -1551,7 +1551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1
@@ -1618,6 +1618,10 @@ MonoBehaviour:
   fakeText: {fileID: 0}
   bulbLight: {fileID: 0}
   plugs: []
+  hairs: []
+  jengas: []
+  ppt_j: {fileID: 0}
+  ppt_back: {fileID: 0}
   cokeEffect: []
   coolManEffect: {fileID: 0}
   test: 0
@@ -1730,7 +1734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1
@@ -1885,7 +1889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1
@@ -1995,7 +1999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1
@@ -2121,7 +2125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1
@@ -2349,7 +2353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071f9c058744cf43a6448e9b56dda81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 0}
+  tooh: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   boxCollider: {fileID: 0}
   _time: 0.2
   _distance: 0.1

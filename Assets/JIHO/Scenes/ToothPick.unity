@@ -320,6 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd88db84296389142b2a7ef84f143565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Durlty: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   teeth: {fileID: 1341154725}
 --- !u!4 &125522852 stripped
 Transform:
@@ -593,6 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd88db84296389142b2a7ef84f143565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Durlty: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   teeth: {fileID: 1341154725}
 --- !u!64 &367833851
 MeshCollider:
@@ -625,6 +627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd88db84296389142b2a7ef84f143565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Durlty: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   teeth: {fileID: 1341154725}
 --- !u!64 &505227132
 MeshCollider:
@@ -759,6 +762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd88db84296389142b2a7ef84f143565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Durlty: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   teeth: {fileID: 1341154725}
 --- !u!64 &638708154
 MeshCollider:
@@ -954,6 +958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd88db84296389142b2a7ef84f143565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Durlty: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   teeth: {fileID: 1341154725}
 --- !u!64 &810322826
 MeshCollider:
@@ -1157,6 +1162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd88db84296389142b2a7ef84f143565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Durlty: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   teeth: {fileID: 1341154725}
 --- !u!64 &876740247
 MeshCollider:
@@ -1286,6 +1292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd88db84296389142b2a7ef84f143565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Durlty: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   teeth: {fileID: 1341154725}
 --- !u!64 &890697405
 MeshCollider:
@@ -1407,6 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd88db84296389142b2a7ef84f143565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Durlty: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   teeth: {fileID: 1341154725}
 --- !u!64 &1267049529
 MeshCollider:
@@ -1859,6 +1867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd88db84296389142b2a7ef84f143565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Durlty: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   teeth: {fileID: 1341154725}
 --- !u!64 &1568366714
 MeshCollider:
@@ -2057,6 +2066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd88db84296389142b2a7ef84f143565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Durlty: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   teeth: {fileID: 1341154725}
 --- !u!64 &1627043132
 MeshCollider:
@@ -2413,6 +2423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd88db84296389142b2a7ef84f143565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Durlty: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   teeth: {fileID: 1341154725}
 --- !u!64 &1704362670
 MeshCollider:
@@ -2542,6 +2553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd88db84296389142b2a7ef84f143565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Durlty: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   teeth: {fileID: 1341154725}
 --- !u!64 &1779929002
 MeshCollider:
@@ -2671,6 +2683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd88db84296389142b2a7ef84f143565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Durlty: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
   teeth: {fileID: 1341154725}
 --- !u!64 &1847666936
 MeshCollider:
@@ -3022,6 +3035,10 @@ MonoBehaviour:
   fakeText: {fileID: 0}
   bulbLight: {fileID: 0}
   plugs: []
+  hairs: []
+  jengas: []
+  ppt_j: {fileID: 0}
+  ppt_back: {fileID: 0}
   cokeEffect: []
   coolManEffect: {fileID: 0}
   test: 0

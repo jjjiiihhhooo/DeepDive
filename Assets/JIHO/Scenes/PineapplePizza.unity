@@ -327,6 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd66d915c4c23943ac55e316e780726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pine: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
 --- !u!1 &294912570
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd66d915c4c23943ac55e316e780726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pine: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
 --- !u!1 &307644385
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd66d915c4c23943ac55e316e780726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pine: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
 --- !u!1 &694406837
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,6 +744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd66d915c4c23943ac55e316e780726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pine: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
 --- !u!1 &1152079948 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5383139470222702283, guid: 3070e85e8e8657b4c84e6f163a7d1c9c, type: 3}
@@ -876,6 +880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd66d915c4c23943ac55e316e780726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pine: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
 --- !u!1001 &1527412217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1059,6 +1064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd66d915c4c23943ac55e316e780726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pine: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
 --- !u!1001 &2092022703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1329,3 +1335,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd66d915c4c23943ac55e316e780726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pine: {fileID: 8300000, guid: 5c029db1e084fd14ca4b389f3966a9d9, type: 3}
