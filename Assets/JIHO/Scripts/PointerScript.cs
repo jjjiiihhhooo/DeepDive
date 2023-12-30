@@ -24,6 +24,9 @@ public class PointerScript : MonoBehaviour
 
     public GameObject beforeCoke;
     public GameObject afterCoke;
+    public GameObject fakeText;
+    public ParticleSystem[] cokeEffect;
+    public ParticleSystem coolManEffect;
 
     private Vector3 startPos = Vector3.zero;
 
@@ -38,6 +41,18 @@ public class PointerScript : MonoBehaviour
     {
         if (_clearEvent != null) Manager.Instance.sceneDatas[Manager.Instance.sceneIndex]._clearEvent = _clearEvent; 
         if(_overEvent != null) Manager.Instance.sceneDatas[Manager.Instance.sceneIndex]._overEvent = _overEvent;
+
+        if(coolManEffect != null) coolManEffect.Play();
+
+    }
+
+    private void Update()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "CrossCouple" && Manager.Instance.isStart)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1.5f * Time.deltaTime);
+        }
     }
 
     public void OnMouseDrag()
@@ -58,17 +73,26 @@ public class PointerScript : MonoBehaviour
         if(other.tag == "Water")
         {
             Scene scene = SceneManager.GetActiveScene();
-            if(scene.name == "DiveMan")
+            if(scene.name == "DiveMan" || scene.name == "CoolMan")
             {
+                Debug.Log("TriggerMan");
                 DiveManClear();
             }
         }
         else if(other.tag == "Platform")
         {
             Scene scene = SceneManager.GetActiveScene();
-            if (scene.name == "DiveMan")
+            if (scene.name == "DiveMan" || scene.name == "CoolMan")
             {
                 DiveManOver();
+            }
+        }
+        else if(other.tag == "Couple")
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            if (scene.name == "CrossCouple")
+            {
+                CrossCoupleOver();
             }
         }
     }
@@ -82,7 +106,7 @@ public class PointerScript : MonoBehaviour
 
     public void ToothClear()
     {
-
+        Manager.Instance.GameClear();
     }
 
     public void ToothClearEvent()
@@ -92,7 +116,7 @@ public class PointerScript : MonoBehaviour
 
     public void ToothOver()
     {
-
+        Manager.Instance.RoundOver();
     }
 
     public void ToothOverEvent()
@@ -108,7 +132,7 @@ public class PointerScript : MonoBehaviour
 
     public void ToutleClear()
     {
-
+        Manager.Instance.GameClear();
     }
 
     public void ToutleClearEvent()
@@ -118,7 +142,7 @@ public class PointerScript : MonoBehaviour
 
     public void ToutleOver()
     {
-
+        Manager.Instance.RoundOver();
     }
 
     public void ToutleOverEvent()
@@ -129,6 +153,16 @@ public class PointerScript : MonoBehaviour
     ////////////////////////////////////////
     public void Coke()
     {
+        if (animator == null) animator = GetComponent<Animator>();
+
+        if (!cokeEffect[0].gameObject.activeSelf)
+        {
+            cokeEffect[0].gameObject.SetActive(true);
+            cokeEffect[1].gameObject.SetActive(true);
+            cokeEffect[0].Play();
+            cokeEffect[1].Play();
+        }
+
         if (startPos == Vector3.zero) startPos = Input.mousePosition;
 
         Vector3 tempPos = Input.mousePosition;
@@ -137,7 +171,7 @@ public class PointerScript : MonoBehaviour
         {
             test += tempPos.x - startPos.x;
             transform.Rotate(new Vector3(0f, transform.rotation.y - (tempPos.x - startPos.x) * 0.3f, 0f));
-            transform.position += Vector3.up * 0.003f;
+            transform.position += Vector3.up * 0.006f;
         }
 
         startPos = tempPos;
@@ -155,7 +189,11 @@ public class PointerScript : MonoBehaviour
 
     public void CokeClearEvent()
     {
-        Debug.Log("CokeClear");
+        cokeEffect[0].Stop();
+        cokeEffect[1].Stop();
+        animator.SetTrigger("Clear");
+        cokeEffect[2].gameObject.SetActive(true);
+        cokeEffect[2].Play();
         beforeCoke.SetActive(false);
         afterCoke.SetActive(true);
     }
@@ -174,9 +212,9 @@ public class PointerScript : MonoBehaviour
     public void DiveMan()
     {
         if (animator == null) animator = GetComponent<Animator>();
-
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Dive"))
         {
+            animator.applyRootMotion = true;
             animator.SetTrigger("Dive");
         }
 
@@ -192,12 +230,13 @@ public class PointerScript : MonoBehaviour
 
     public void DiveManClear()
     {
+        Debug.Log("ClearMan");
         Manager.Instance.GameClear();
     }
 
     public void DiveManClearEvent()
     {
-        Debug.Log("DiveClear");
+        if (coolManEffect != null) coolManEffect.Stop();
         animator.SetTrigger("Clear");
     }
 
@@ -252,4 +291,127 @@ public class PointerScript : MonoBehaviour
 
     }
     ////////////////////////////////////////
+    public void CrossCouple()
+    {
+        if (startPos == Vector3.zero) startPos = transform.position;
+
+        if (animator == null) animator = GetComponent<Animator>();
+
+        float distance = Camera.main.WorldToScreenPoint(transform.position).z;
+
+        Vector3 mousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
+        Vector3 objPos = Camera.main.ScreenToWorldPoint(mousePos);
+
+        transform.position = new Vector3(objPos.x, transform.position.y, transform.position.z);
+
+        if(Vector3.Distance(transform.position, startPos) > 4)
+        {
+            CrossCoupleClear();
+        }
+    }
+
+    public void CrossCoupleClear()
+    {
+        Manager.Instance.GameClear();
+    }
+
+    public void CrossCoupleClearEvent()
+    {
+
+    }
+
+    public void CrossCoupleOver()
+    {
+        Manager.Instance.RoundOver();
+    }
+    public void CrossCoupleOverEvent()
+    {
+
+    }
+    ////////////////////////////////////////
+    public void FakeText()
+    {
+        if (startPos == Vector3.zero) startPos = transform.position;
+
+        float distance = Camera.main.WorldToScreenPoint(transform.position).z;
+
+        Vector3 mousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
+        Vector3 objPos = Camera.main.ScreenToWorldPoint(mousePos);
+
+        transform.position = new Vector3(objPos.x, transform.position.y, transform.position.z);
+
+        if (Vector3.Distance(transform.position, startPos) > 8)
+        {
+            FakeTextClear();
+        }
+    }
+
+    public void FakeTextClear()
+    {
+        Manager.Instance.GameClear();
+    }
+
+    public void FakeTextClearEvent()
+    {
+        fakeText.SetActive(false);
+    }
+
+    public void FakeTextOver()
+    {
+        Manager.Instance.RoundOver();
+    }
+
+    public void FakeTextOverEvent()
+    {
+
+    }
+    ////////////////////////////////////////
+    public void BulbRemove()
+    {
+        if (animator == null) animator = GetComponent<Animator>();
+
+        
+        if (startPos == Vector3.zero) startPos = Input.mousePosition;
+
+        Vector3 tempPos = Input.mousePosition;
+
+        if (tempPos.x - startPos.x >= 0)
+        {
+            test += tempPos.x - startPos.x;
+            transform.Rotate(new Vector3(0f, transform.rotation.y - (tempPos.x - startPos.x) * 0.3f, 0f));
+            transform.position += Vector3.up * 0.006f;
+        }
+
+        startPos = tempPos;
+
+        if (test >= clearCount)
+        {
+            BulbRemoveClear();
+        }
+    }
+
+    public void BulbRemoveClear()
+    {
+        Manager.Instance.GameClear();
+    }
+
+    public void BulbRemoveClearEvent()
+    {
+
+    }
+
+    public void BulbRemoveOver()
+    {
+        Manager.Instance.RoundOver();
+    }
+
+    public void BulbRemoveOverEvent()
+    {
+
+    }
+    ////////////////////////////////////////
 }
+
+
+
+
