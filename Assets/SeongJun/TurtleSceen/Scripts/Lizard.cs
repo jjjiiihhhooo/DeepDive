@@ -4,18 +4,38 @@ using UnityEngine;
 
 public class Lizard : MonoBehaviour
 {
-    public float Speed;
     public float UpSpeed;
     private Rigidbody TurtleRigidbody;
 
     void Start()
     {
         TurtleRigidbody = GetComponent<Rigidbody>();
-        TurtleRigidbody.AddForce(0, 0, Speed);
+        StartCoroutine(MoveStart());
     }
 
     public void Update()
     {
-        TurtleRigidbody.AddForce(0, 0, UpSpeed);
+        
+        
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent<PointerScript>(out PointerScript com))
+        {
+            com.ToutleOver();
+        }
+    }
+
+    IEnumerator MoveStart()
+    {
+        yield return new  WaitForSeconds(3.5f);
+        while(this.gameObject && Manager.Instance.isStart)
+        {
+            TurtleRigidbody.AddForce(0, 0, UpSpeed);
+            yield return null;
+        }
+        
+        yield return null;
     }
 }

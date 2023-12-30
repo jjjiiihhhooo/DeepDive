@@ -50,7 +50,7 @@ public class PointerScript : MonoBehaviour
     public void OnMouseDown()
     {
         if (myType != Type.Click || !Manager.Instance.isStart) return;
-        _event.Invoke();
+        _event?.Invoke();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -82,7 +82,8 @@ public class PointerScript : MonoBehaviour
 
     public void ToothClear()
     {
-
+        
+        Manager.Instance.GameClear();
     }
 
     public void ToothClearEvent()
@@ -92,7 +93,7 @@ public class PointerScript : MonoBehaviour
 
     public void ToothOver()
     {
-
+        Manager.Instance.RoundOver();
     }
 
     public void ToothOverEvent()
@@ -102,13 +103,12 @@ public class PointerScript : MonoBehaviour
     ////////////////////////////////////////
     public void Toutle()
     {
-        TurtleMovemont turtleMovemont = GetComponent<TurtleMovemont>();
-        turtleMovemont.SpeedUpTurtle();
+        
     }
 
     public void ToutleClear()
     {
-
+        Manager.Instance.GameClear();
     }
 
     public void ToutleClearEvent()
@@ -118,7 +118,7 @@ public class PointerScript : MonoBehaviour
 
     public void ToutleOver()
     {
-
+        Manager.Instance.RoundOver();
     }
 
     public void ToutleOverEvent()
