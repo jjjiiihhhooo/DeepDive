@@ -8,4 +8,8 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: BulbRemove
   m_Controller: {fileID: 9100000, guid: f6cb6f58ebd83b94b9fd6d6369d5d471, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 4374fcc9f41974f4ca867d1b7dba1c8a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c25f77ef1ab0bfc4e9080cd586a182a4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8b5810abff4de3e4eabe2f050bab5c46, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 404696ee0d736ba4eb54612988a3fe5c, type: 2}

@@ -25,6 +25,8 @@ public class PointerScript : MonoBehaviour
     public GameObject beforeCoke;
     public GameObject afterCoke;
     public GameObject fakeText;
+    public GameObject bulbLight;
+    public GameObject[] plugs;
     public ParticleSystem[] cokeEffect;
     public ParticleSystem coolManEffect;
 
@@ -49,6 +51,7 @@ public class PointerScript : MonoBehaviour
     private void Update()
     {
         Scene scene = SceneManager.GetActiveScene();
+
         if (scene.name == "CrossCouple" && Manager.Instance.isStart)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1.5f * Time.deltaTime);
@@ -261,7 +264,7 @@ public class PointerScript : MonoBehaviour
         if (startPos == Vector3.zero) startPos = Input.mousePosition;
         Vector3 curPos = Input.mousePosition;
 
-        if (Vector3.Distance(startPos, curPos) > 500f) 
+        if (Vector3.Distance(startPos, curPos) > 350f) 
         {
             if (isHairTarget) HairRemoveClear();
             else HairRemoveOver();
@@ -396,7 +399,21 @@ public class PointerScript : MonoBehaviour
 
     public void BulbRemoveClearEvent()
     {
+        animator.SetTrigger("Clear");
+        StartCoroutine(BulbLightCor());
+    }
 
+    private IEnumerator BulbLightCor()
+    {
+        bulbLight.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        bulbLight.SetActive(false);
+        yield return new WaitForSeconds(0.1f);
+        bulbLight.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        bulbLight.SetActive(false);
+        yield return new WaitForSeconds(0.1f);
+        bulbLight.SetActive(true);
     }
 
     public void BulbRemoveOver()
@@ -409,6 +426,101 @@ public class PointerScript : MonoBehaviour
 
     }
     ////////////////////////////////////////
+    public void RedCarpet()
+    {
+        if (startPos == Vector3.zero) startPos = transform.position;
+
+        float distance = Camera.main.WorldToScreenPoint(transform.position).z;
+
+        Vector3 mousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
+        Vector3 objPos = Camera.main.ScreenToWorldPoint(mousePos);
+
+        transform.position = new Vector3(objPos.x, transform.position.y, transform.position.z);
+
+        if (Vector3.Distance(transform.position, startPos) > 4)
+        {
+            RedCarpetClear();
+        }
+    }
+
+    public void RedCarpetClear()
+    {
+        Manager.Instance.GameClear();
+    }
+
+    public void RedCarpetClearEvent()
+    {
+        
+    }
+
+    public void RedCarpetOver()
+    {
+        Manager.Instance.RoundOver();
+    }
+
+    public void RedCarpetOverEvent()
+    {
+
+    }
+    ////////////////////////////////////////
+    public void PlugPull()
+    {
+        if (startPos == Vector3.zero) startPos = Input.mousePosition;
+
+        Vector3 tempPos = Input.mousePosition;
+
+        if(Vector3.Distance(startPos, tempPos) > 700f)
+        {
+            PlugPullClear();
+        }
+        else if(Vector3.Distance(startPos, tempPos) > 300f && !plugs[1].activeSelf)
+        {
+            plugs[0].SetActive(false);
+            plugs[1].SetActive(true);
+        }
+        
+    }
+
+    public void PlugPullClear()
+    {
+        Manager.Instance.GameClear();
+    }
+
+    public void PlugPullClearEvent()
+    {
+        plugs[1].SetActive(false);
+        plugs[2].SetActive(true);
+        plugs[2].GetComponent<Rigidbody>().useGravity = true;
+        plugs[3].SetActive(true);
+        StartCoroutine(PlugClearCor());
+    }
+
+    private IEnumerator PlugClearCor()
+    {
+        float count = 1f;
+        RectTransform rect = plugs[4].GetComponent<RectTransform>();
+
+        while (count > 0)
+        {
+            count -= 0.02f;
+            rect.localScale = new Vector3(count, count, 1f);
+            yield return new WaitForEndOfFrame();
+        }
+        rect.localScale = Vector3.zero;
+    }
+
+    public void PlugPullOver()
+    {
+        Manager.Instance.RoundOver();
+    }
+
+    public void PlugPullOverEvent()
+    {
+
+    }
+
+    ////////////////////////////////////////
+
 }
 
 
