@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Santa : MonoBehaviour
 {
+    [SerializeField] AudioClip DropSFX;
+
     public Rigidbody body;
     public float UpSpeed;
     [SerializeField] GameObject Bag;
@@ -57,8 +59,7 @@ public class Santa : MonoBehaviour
     public void CheckClear()
     {
         if(ChimneyList.Find(x => x.isSmile && !x.Finsh))
-        {
-            
+        {            
             return;
         }
         body.AddForce(UpSpeed, 0, 0);
@@ -68,33 +69,39 @@ public class Santa : MonoBehaviour
     {
         if (other.gameObject.name.Equals("Floor"))
         {
+            var box = GetComponent<BoxCollider>();  
+            box.enabled = false;    
             if(transform.childCount < 4)
             {
-
                 Manager.Instance.RoundOver();
-                body.AddForce(UpSpeed, 0, 0);
+                body.AddForce(0, 0, 0);
             }
             else
             {
                 Manager.Instance.GameClear();
-                body.AddForce(UpSpeed, 0, 0);
+                body.AddForce(0, 0, 0);
             }
-            
+            print("¾Æ¾Æ");
         }
             
     }
 
-    public IEnumerator GameOver()
+    public void GameOver()
     {
-        Manager.Instance.RoundOver();
-        body.AddForce(UpSpeed, 2000f, 0);
+        if(!Manager.Instance.isOver)
+        {
+            Manager.Instance.RoundOver();
+            body.AddForce(UpSpeed, 2000f, 0);
+        }
+        
        // yield return new WaitForSeconds(2f);
-        yield return null;  
+       // yield return null;  
     }
 
 
     public void DropGift()
     {
+
         Instantiate(GiftList[Random.Range(0, GiftList.Count)], Bag.transform.position, Quaternion.identity);
     }
 }

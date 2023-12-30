@@ -46,9 +46,7 @@ public class Chimney : MonoBehaviour
                 }
                 else
                 {
-                    StartCoroutine(santa.GameOver());
-                    Manager.Instance.RoundOver();
-                  //  santa.body.AddForce(santa.UpSpeed, 0, 0);
+                    santa.GameOver();
                 }
             }
         }

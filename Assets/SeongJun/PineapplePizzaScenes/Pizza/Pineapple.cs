@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Pineapple : MonoBehaviour
 {
+    [SerializeField] AudioClip Pine; 
     public Action remove;
     public void OnMouseDown()
     {
@@ -15,5 +16,10 @@ public class Pineapple : MonoBehaviour
     public void NoChose()
     {
         gameObject.SetActive(false);    
+    }
+
+    private void OnDestroy()
+    {
+        
     }
 }

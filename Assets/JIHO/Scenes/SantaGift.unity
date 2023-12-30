@@ -310,8 +310,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.52262634, y: 50, z: 1}
-  m_Center: {x: -0.23868811, y: 0.11091677, z: 0}
+  m_Size: {x: 0, y: 50, z: 1}
+  m_Center: {x: 0.022625051, y: 0.11091676, z: 0}
 --- !u!1 &489122157
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,12 +600,82 @@ MonoBehaviour:
   santa: {fileID: 0}
   isSmile: 0
   Finsh: 0
+  isNoCry: 0
   SmileClip: {fileID: 0}
   CryClip: {fileID: 0}
   Smile: {fileID: 0}
   EmoList:
   - {fileID: 2100000, guid: 81788c5fcca838642886ac19f05bb523, type: 2}
   - {fileID: 2100000, guid: d3c7f64d987af5143baf004030437ef1, type: 2}
+--- !u!1 &657368166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 657368168}
+  - component: {fileID: 657368167}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &657368167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657368166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472afd5579d699a488c6787053821f61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event:
+    m_PersistentCalls:
+      m_Calls: []
+  _clearEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _overEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  animator: {fileID: 0}
+  toothCount: 3
+  beforeCoke: {fileID: 0}
+  afterCoke: {fileID: 0}
+  fakeText: {fileID: 0}
+  bulbLight: {fileID: 0}
+  plugs: []
+  jengas: []
+  ppt_j: {fileID: 0}
+  ppt_back: {fileID: 0}
+  cokeEffect: []
+  coolManEffect: {fileID: 0}
+  test: 0
+  clearCount: 0
+  isHairTarget: 0
+  myType: 0
+--- !u!4 &657368168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657368166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -33.025307, y: 1.3677063, z: -3.670589}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &728888390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -713,6 +783,7 @@ MonoBehaviour:
   santa: {fileID: 0}
   isSmile: 0
   Finsh: 0
+  isNoCry: 0
   SmileClip: {fileID: 0}
   CryClip: {fileID: 0}
   Smile: {fileID: 0}
@@ -1033,6 +1104,7 @@ MonoBehaviour:
   santa: {fileID: 0}
   isSmile: 0
   Finsh: 0
+  isNoCry: 0
   SmileClip: {fileID: 0}
   CryClip: {fileID: 0}
   Smile: {fileID: 0}
@@ -1067,7 +1139,7 @@ BoxCollider:
   m_GameObject: {fileID: 1125021858}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1440,6 +1512,7 @@ MonoBehaviour:
   santa: {fileID: 0}
   isSmile: 0
   Finsh: 0
+  isNoCry: 0
   SmileClip: {fileID: 0}
   CryClip: {fileID: 0}
   Smile: {fileID: 0}
@@ -3259,6 +3332,7 @@ MonoBehaviour:
   santa: {fileID: 0}
   isSmile: 0
   Finsh: 0
+  isNoCry: 0
   SmileClip: {fileID: 0}
   CryClip: {fileID: 0}
   Smile: {fileID: 0}

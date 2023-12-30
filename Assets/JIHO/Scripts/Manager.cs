@@ -141,7 +141,7 @@ public class Manager : MonoBehaviour
     {
         isOver = true;
         isStart = false;
-
+        
         uiManager.RoundOver(sceneDatas[sceneIndex].clearTimer);
         sceneDatas[sceneIndex]._overEvent?.Invoke();
     }
