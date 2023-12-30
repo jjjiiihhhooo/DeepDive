@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -326,70 +326,10 @@ MonoBehaviour:
   tempSceneName: Test2
   tempTimer: 10
   sceneDatas:
-  - name: DiveMan
-    type: "\uBE60\uD2B8\uB824\uB77C"
-    timer: 10
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: HairRemove
-    type: "\uBE7C\uB77C"
-    timer: 10
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: CrossCouple
-    type: "\uBE60\uC838\uB77C"
-    timer: 10
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: BottleCap
-    type: "\uBE7C\uB77C"
-    timer: 10
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: CoolMan
-    type: "\uBE60\uD2B8\uB824\uB77C"
-    timer: 10
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: FakeText
-    type: "\uBE7C\uB77C"
-    timer: 10
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: TurtleAccel
+  - name: ToothPick
     type: 
-    timer: 20
-    clearTimer: 3
+    timer: 30
+    clearTimer: 0.5
     _clearEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -398,8 +338,28 @@ MonoBehaviour:
         m_Calls: []
   - name: ToothRemove
     type: 
-    timer: 20
-    clearTimer: 3
+    timer: 30
+    clearTimer: 0.5
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: TurtleAccel
+    type: 
+    timer: 30
+    clearTimer: 0.5
+    _clearEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _overEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: SantaNoCry
+    type: 
+    timer: 30
+    clearTimer: 0.5
     _clearEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -408,38 +368,18 @@ MonoBehaviour:
         m_Calls: []
   - name: SantaGift
     type: 
-    timer: 20
-    clearTimer: 3
+    timer: 30
+    clearTimer: 0.5
     _clearEvent:
       m_PersistentCalls:
         m_Calls: []
     _overEvent:
       m_PersistentCalls:
         m_Calls: []
-  - name: BulbRemove
-    type: "\uBE7C\uB77C"
-    timer: 20
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: RedCarpet
-    type: "\uBE60\uC838\uB77C"
-    timer: 20
-    clearTimer: 3
-    _clearEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _overEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: PlugPull
-    type: "\uBE7C\uB77C"
-    timer: 20
-    clearTimer: 3
+  - name: PineapplePizza
+    type: 
+    timer: 15
+    clearTimer: 1
     _clearEvent:
       m_PersistentCalls:
         m_Calls: []

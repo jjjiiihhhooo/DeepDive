@@ -80,4 +80,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JIHO/Scenes/RedCarpet.unity
     guid: f3e931678df6a4f4984fa71464b51a96
+  - enabled: 1
+    path: Assets/JIHO/Scenes/SantaNoCry.unity
+    guid: d87f8c2f2ff4fb94c896a702fee5a647
   m_configObjects: {}

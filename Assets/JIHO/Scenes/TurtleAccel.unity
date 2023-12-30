@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35bd2cceb5a4fb419b4b32770e0cdb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpSpeed: 3
+  UpSpeed: 20
 --- !u!1001 &429872320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35bd2cceb5a4fb419b4b32770e0cdb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpSpeed: 3
+  UpSpeed: 20
 --- !u!1001 &829434995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -649,7 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35bd2cceb5a4fb419b4b32770e0cdb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpSpeed: 3
+  UpSpeed: 20
 --- !u!1001 &835030789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35bd2cceb5a4fb419b4b32770e0cdb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpSpeed: 3
+  UpSpeed: 20
 --- !u!1 &1228273410
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,8 +894,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.7141036, y: 1.1725655, z: 1}
+  m_Center: {x: -0.035621833, y: 0.4444483, z: 0}
 --- !u!114 &1294801147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,6 +934,8 @@ MonoBehaviour:
   beforeCoke: {fileID: 0}
   afterCoke: {fileID: 0}
   fakeText: {fileID: 0}
+  bulbLight: {fileID: 0}
+  plugs: []
   cokeEffect: []
   coolManEffect: {fileID: 0}
   test: 0
@@ -953,7 +955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 20
-  UpSpeed: 20
+  UpSpeed: 500
 --- !u!1 &1570673413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,7 +1157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35bd2cceb5a4fb419b4b32770e0cdb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpSpeed: 3
+  UpSpeed: 20
 --- !u!1 &1861039734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,8 +1269,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7734981818857336644}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00485, y: 1, z: 3.767781}
-  m_LocalScale: {x: 0.013133306, y: 0.015999997, z: 0.003602958}
+  m_LocalPosition: {x: 0.00485, y: 1, z: 3.581675}
+  m_LocalScale: {x: 0.013133306, y: 0.015999997, z: 0.00409924}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 145324217}
