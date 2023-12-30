@@ -65,7 +65,7 @@ public class PointerScript : MonoBehaviour
     public void OnMouseDown()
     {
         if (myType != Type.Click || !Manager.Instance.isStart) return;
-        _event.Invoke();
+        _event?.Invoke();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -126,8 +126,7 @@ public class PointerScript : MonoBehaviour
     ////////////////////////////////////////
     public void Toutle()
     {
-        TurtleMovemont turtleMovemont = GetComponent<TurtleMovemont>();
-        turtleMovemont.SpeedUpTurtle();
+        
     }
 
     public void ToutleClear()

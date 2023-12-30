@@ -19,6 +19,12 @@ public class TurtleMovemont : MonoBehaviour
         
     }
 
+    public void OnMouseDown()
+    {
+        TurtleMovemont turtleMovemont = GetComponent<TurtleMovemont>();
+        turtleMovemont.SpeedUpTurtle();
+    }
+
     public void SpeedUpTurtle()
     {
         TurtleRigidbody.AddForce(0, 0, UpSpeed);
