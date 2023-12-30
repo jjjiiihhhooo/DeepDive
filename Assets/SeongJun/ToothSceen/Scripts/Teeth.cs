@@ -31,7 +31,7 @@ public class Teeth : MonoBehaviour
     }
     public void RemoveTooth()
     {
-        Max--;
+        Max--; 
         if(Max <= 0)
             pointerScript.ToothClear();
     }

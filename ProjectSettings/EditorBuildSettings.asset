@@ -77,4 +77,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JIHO/Scenes/FakeText.unity
     guid: 040c6f0c0a962c8458a506137aa9ff57
+  - enabled: 1
+    path: Assets/JIHO/Scenes/SantaNoCry.unity
+    guid: d87f8c2f2ff4fb94c896a702fee5a647
   m_configObjects: {}

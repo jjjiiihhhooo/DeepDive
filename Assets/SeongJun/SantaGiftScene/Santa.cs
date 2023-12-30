@@ -1,18 +1,20 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Santa : MonoBehaviour
 {
-    Rigidbody body;
-    [SerializeField] float UpSpeed;
+    public Rigidbody body;
+    public float UpSpeed;
     [SerializeField] GameObject Bag;
     [SerializeField] List<GameObject> GiftList;
 
     [SerializeField] List<Chimney> ChimneyList;
 
-    float rotSpeed = 200f;
+    float rotSpeed = 1000f;
+    bool isMove = false;
     public void Awake()
     {       
        for(var i =0; i< ChimneyList.Count; i++)
@@ -41,14 +43,15 @@ public class Santa : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Instantiate(GiftList[Random.Range(0, GiftList.Count)], Bag.transform.position, Quaternion.identity);
+        if (isMove && transform.childCount < 4)
+            DropGift();
     }
 
     IEnumerator MoveStart()
     {
         yield return new WaitForSeconds(4f);
         body.AddForce(-UpSpeed, 0, 0);
-        
+        isMove = true;
         yield return null;
     }
     public void CheckClear()
@@ -64,7 +67,34 @@ public class Santa : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name.Equals("Floor"))
-            Manager.Instance.GameOver();
+        {
+            if(transform.childCount < 4)
+            {
+
+                Manager.Instance.RoundOver();
+                body.AddForce(UpSpeed, 0, 0);
+            }
+            else
+            {
+                Manager.Instance.GameClear();
+                body.AddForce(UpSpeed, 0, 0);
+            }
+            
+        }
+            
     }
 
+    public IEnumerator GameOver()
+    {
+        Manager.Instance.RoundOver();
+        body.AddForce(UpSpeed, 2000f, 0);
+       // yield return new WaitForSeconds(2f);
+        yield return null;  
+    }
+
+
+    public void DropGift()
+    {
+        Instantiate(GiftList[Random.Range(0, GiftList.Count)], Bag.transform.position, Quaternion.identity);
+    }
 }

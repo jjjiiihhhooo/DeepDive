@@ -56,10 +56,14 @@ public class Tooth : MonoBehaviour
             if (Hp > 0)
             {
                 StartCoroutine(Shake());
-                Hp--;                
+                Hp--;
+                
             }
             if (Hp <= 0)
             {
+                isTouchable = false;
+                body.useGravity = true;
+                print("ºüÁø´Ù");
                 Dead(); 
                 
             }
@@ -69,8 +73,8 @@ public class Tooth : MonoBehaviour
 
     public void Dead()
     {
-        isTouchable = false;
-        body.useGravity = true;
+        
+        
         teeth.RemoveTooth();
     }
 
@@ -122,6 +126,7 @@ public class Tooth : MonoBehaviour
                 yield return null;
             }
         }
+        if(Hp>0)
         isTouchable = true;
         transform.position = _startPos;
     }

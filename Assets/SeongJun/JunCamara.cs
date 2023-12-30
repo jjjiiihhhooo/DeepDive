@@ -9,6 +9,7 @@ public class JunCamara : MonoBehaviour
 
     public void Update()
     {
+        if(Manager.Instance.isStart)
         transform.position = player.transform.position + fixedV3;
     }
 }

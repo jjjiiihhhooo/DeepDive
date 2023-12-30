@@ -8,14 +8,14 @@ public class Gift : MonoBehaviour
 
     public void Start()
     {
-        gameObject.GetComponent<Rigidbody>().AddForce(Vector3.down * 300f);
+        gameObject.GetComponent<Rigidbody>().AddForce(Vector3.down * 500f);
     }
     public void OnTriggerEnter(Collider other)
-    {
-        
+    {        
         if (other.gameObject.TryGetComponent<Santa>(out Santa com))
         {
             santa = com;
+           
         }
 
     }
