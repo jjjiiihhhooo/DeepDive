@@ -11,8 +11,9 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI roundText;
     public TextMeshProUGUI roundOverText;
     public TextMeshProUGUI end_clearCountText;
-    public TextMeshProUGUI end_failCountText;
 
+    public GameObject clearTitle;
+    public GameObject exitTitle;
     public GameObject firstStartButton_obj;
 
     public Animator clearAnimator;
@@ -77,5 +78,9 @@ public class UIManager : MonoBehaviour
 
     public void GameEnd()
     {
+        clearTitle.SetActive(false);
+        exitTitle.SetActive(true);
+        end_clearCountText.text = "SCORE : " + Manager.Instance.clearCount.ToString() + " / " + Manager.Instance.maxCount.ToString();
+        end_clearCountText.gameObject.SetActive(true);
     }
 }

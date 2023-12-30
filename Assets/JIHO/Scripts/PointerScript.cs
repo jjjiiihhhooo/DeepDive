@@ -257,6 +257,7 @@ public class PointerScript : MonoBehaviour
 
     public void DiveManOverEvent()
     {
+        if (animator == null) animator = GetComponent<Animator>();
         animator.SetTrigger("Fail");
     }
     ////////////////////////////////////////
@@ -266,11 +267,11 @@ public class PointerScript : MonoBehaviour
 
         Vector3 tempPos = Input.mousePosition;
 
-        if (Vector3.Distance(startPos, tempPos) > 500f)
+        if (Vector3.Distance(startPos, tempPos) > 300f)
         {
             HairRemoveClear();
         }
-        else if (Vector3.Distance(startPos, tempPos) > 200f && !hairs[1].activeSelf)
+        else if (Vector3.Distance(startPos, tempPos) > 100f && !hairs[1].activeSelf)
         {
             Debug.Log(hairs.Length);
             hairs[0].SetActive(false);

@@ -26,7 +26,7 @@ public class Manager : MonoBehaviour
     public int roundCount = 1;
     public int sceneIndex = -1;
     public int clearCount = 0;
-    public int failCount = 0;
+    public int maxCount = 0;
 
     public string tempSceneName = "Test2";
     public float tempTimer = 10f;
@@ -59,6 +59,7 @@ public class Manager : MonoBehaviour
     {
         ListShuffle();
         roundCount = 0;
+        maxCount = sceneDatas.Length;
         //GameStart();
     }
 
@@ -138,7 +139,6 @@ public class Manager : MonoBehaviour
 
     public void RoundOver()
     {
-        failCount++;
         soundManager.Play(soundManager.audioDictionary["Fail"], false);
         isOver = true;
         isStart = false;
@@ -149,6 +149,12 @@ public class Manager : MonoBehaviour
 
     public void LastGameClear()
     {
+        SceneManager.LoadScene("GameEnd");
+        uiManager.GameEnd();
+    }
 
+    public void GameExit()
+    {
+        Application.Quit();
     }
 }
