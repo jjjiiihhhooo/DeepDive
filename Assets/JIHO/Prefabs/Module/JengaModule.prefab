@@ -3301,7 +3301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 64e87a98631540046b500425da01fe29, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.24000013
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 64e87a98631540046b500425da01fe29, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3448,6 +3448,7 @@ MonoBehaviour:
   fakeText: {fileID: 0}
   bulbLight: {fileID: 0}
   plugs: []
+  hairs: []
   jengas:
   - {fileID: 5685799126994897175}
   - {fileID: 8651711507587682562}
@@ -3478,6 +3479,8 @@ MonoBehaviour:
   - {fileID: 1256826349923964830}
   - {fileID: 8142729438106218195}
   - {fileID: 1477463993020508671}
+  ppt_j: {fileID: 0}
+  ppt_back: {fileID: 0}
   cokeEffect:
   - {fileID: 0}
   - {fileID: 0}

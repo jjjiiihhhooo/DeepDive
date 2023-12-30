@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 448110124981368504}
   - component: {fileID: 448110124981368505}
   - component: {fileID: 448110124981368506}
+  - component: {fileID: 7652422636201750602}
   m_Layer: 0
   m_Name: RedCarpet
   m_TagString: Untagged
@@ -225,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448110124981368500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.94, y: -1.11, z: -2.8031}
+  m_LocalPosition: {x: -2, y: -1.11, z: -2.8031}
   m_LocalScale: {x: 2.0362086, y: 0.02, z: 15.126038}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -291,7 +292,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448110124981368500}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.75990975}
@@ -359,12 +360,31 @@ MonoBehaviour:
   afterCoke: {fileID: 0}
   fakeText: {fileID: 0}
   bulbLight: {fileID: 0}
+  plugs: []
+  hairs: []
+  jengas: []
+  ppt_j: {fileID: 0}
+  ppt_back: {fileID: 0}
   cokeEffect: []
   coolManEffect: {fileID: 0}
   test: 0
   clearCount: 2000
   isHairTarget: 0
   myType: 1
+--- !u!136 &7652422636201750602
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448110124981368500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.099275164
+  m_Height: 150.16399
+  m_Direction: 1
+  m_Center: {x: -0.06792424, y: 0, z: 0.15}
 --- !u!1 &448110125316289177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,7 +1659,7 @@ GameObject:
   - component: {fileID: 448110123767470182}
   m_Layer: 0
   m_Name: man-shirt_Rig
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

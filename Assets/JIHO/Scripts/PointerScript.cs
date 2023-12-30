@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public enum Type
@@ -27,6 +24,7 @@ public class PointerScript : MonoBehaviour
     public GameObject fakeText;
     public GameObject bulbLight;
     public GameObject[] plugs;
+    public GameObject[] hairs;
     public GameObject[] jengas;
     public GameObject ppt_j;
     public GameObject ppt_back;
@@ -82,6 +80,7 @@ public class PointerScript : MonoBehaviour
             if(scene.name == "DiveMan" || scene.name == "CoolMan")
             {
                 Debug.Log("TriggerMan");
+                Manager.Instance.soundManager.Play(Manager.Instance.soundManager.audioDictionary["DiveWater"], false);
                 DiveManClear();
             }
         }
@@ -100,6 +99,10 @@ public class PointerScript : MonoBehaviour
             {
                 CrossCoupleOver();
             }
+        }
+        else if(other.tag == "Player")
+        {
+            RedCarpetOver();
         }
     }
 
@@ -258,22 +261,22 @@ public class PointerScript : MonoBehaviour
     ////////////////////////////////////////
     public void HairRemove()
     {
-        if(animator == null) animator = GetComponent<Animator>();
-
-        if(!animator.GetCurrentAnimatorStateInfo(0).IsName("Pull"))
-        {
-            animator.SetTrigger("Pull");
-        }
-
         if (startPos == Vector3.zero) startPos = Input.mousePosition;
-        Vector3 curPos = Input.mousePosition;
 
-        if (Vector3.Distance(startPos, curPos) > 350f) 
+        Vector3 tempPos = Input.mousePosition;
+
+        if (Vector3.Distance(startPos, tempPos) > 500f)
         {
-            if (isHairTarget) HairRemoveClear();
-            else HairRemoveOver();
+            HairRemoveClear();
         }
-
+        else if (Vector3.Distance(startPos, tempPos) > 200f && !hairs[1].activeSelf)
+        {
+            Debug.Log(hairs.Length);
+            hairs[0].SetActive(false);
+            hairs[1].SetActive(true);
+            hairs[3].SetActive(false);
+            hairs[4].SetActive(true);
+        }
     }
 
     public void HairRemoveClear()
@@ -283,8 +286,12 @@ public class PointerScript : MonoBehaviour
 
     public void HairRemoveClearEvent()
     {
-        Debug.Log("HairClear");
-        animator.SetTrigger("Clear");
+        Debug.Log("dd");
+
+        hairs[1].SetActive(false);
+        hairs[2].SetActive(true);
+        hairs[4].SetActive(false);
+        hairs[5].SetActive(true);
     }
 
     public void HairRemoveOver()
@@ -332,8 +339,21 @@ public class PointerScript : MonoBehaviour
     }
     public void CrossCoupleOverEvent()
     {
+        StartCoroutine(CrossCoupleOverCor());
+    }
+
+    private IEnumerator CrossCoupleOverCor()
+    {
+        float time = -2f;
+        while(time < 2f)
+        {
+            time += 0.05f;
+            transform.position = new Vector3(time, transform.position.y, transform.position.z);
+            yield return new WaitForEndOfFrame();
+        }
 
     }
+
     ////////////////////////////////////////
     public void FakeText()
     {
@@ -369,7 +389,18 @@ public class PointerScript : MonoBehaviour
 
     public void FakeTextOverEvent()
     {
+        StartCoroutine(FakeTextOverCor());
+    }
 
+    private IEnumerator FakeTextOverCor()
+    {
+        float time = 0f;
+        while (time < 12f)
+        {
+            time += 0.03f;
+            transform.position = new Vector3(time, transform.position.y, transform.position.z);
+            yield return new WaitForEndOfFrame();
+        }
     }
     ////////////////////////////////////////
     public void BulbRemove()
@@ -427,7 +458,8 @@ public class PointerScript : MonoBehaviour
 
     public void BulbRemoveOverEvent()
     {
-
+        if (animator == null) animator = GetComponent<Animator>();
+        animator.SetTrigger("Clear");
     }
     ////////////////////////////////////////
     public void RedCarpet()
@@ -464,8 +496,21 @@ public class PointerScript : MonoBehaviour
 
     public void RedCarpetOverEvent()
     {
+        StartCoroutine(RedCarpetOverCor());
+    }
+
+    private IEnumerator RedCarpetOverCor()
+    {
+        float time = -2f;
+        while (time < 2f)
+        {
+            time += 0.05f;
+            transform.position = new Vector3(time, transform.position.y, transform.position.z);
+            yield return new WaitForEndOfFrame();
+        }
 
     }
+
     ////////////////////////////////////////
     public void PlugPull()
     {
@@ -520,7 +565,10 @@ public class PointerScript : MonoBehaviour
 
     public void PlugPullOverEvent()
     {
-
+        plugs[0].SetActive(false);
+        plugs[1].SetActive(false);
+        plugs[2].SetActive(true);
+        plugs[6].SetActive(true);
     }
 
     ////////////////////////////////////////
@@ -604,9 +652,24 @@ public class PointerScript : MonoBehaviour
 
     public void JengaOverEvent()
     {
-
+        StartCoroutine(JengaOverCor());
     }
 
+    private IEnumerator JengaOverCor()
+    {
+        float time = 0.24f;
+        while (time < 10f)
+        {
+            time += 0.13f;
+            transform.position = new Vector3(time, transform.position.y, transform.position.z);
+            yield return new WaitForEndOfFrame();
+        }
+
+        for (int i = 0; i < jengas.Length; i++)
+        {
+            jengas[i].GetComponent<Rigidbody>().useGravity = true;
+        }
+    }
     ////////////////////////////////////////
 
     public void PptName()
@@ -656,6 +719,18 @@ public class PointerScript : MonoBehaviour
 
     public void PptNameOverEvent()
     {
+        StartCoroutine(PptNameOverCor());
+    }
+
+    private IEnumerator PptNameOverCor()
+    {
+        float time = 0f;
+        while (time < 15f)
+        {
+            time += 0.2f;
+            transform.position = new Vector3(time, transform.position.y, transform.position.z);
+            yield return new WaitForEndOfFrame();
+        }
 
     }
 }
