@@ -10,6 +10,9 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI clearText;
     public TextMeshProUGUI roundText;
     public TextMeshProUGUI roundOverText;
+    public TextMeshProUGUI end_clearCountText;
+    public TextMeshProUGUI end_failCountText;
+
     public GameObject firstStartButton_obj;
 
     public Animator clearAnimator;
@@ -70,5 +73,9 @@ public class UIManager : MonoBehaviour
         typeText.gameObject.SetActive(false);
         roundOverText.gameObject.SetActive(true);
         RoundEnd(delay);
+    }
+
+    public void GameEnd()
+    {
     }
 }

@@ -18,8 +18,7 @@ public class TimerManager : MonoBehaviour
     {
         if (timer <= 0f && !Manager.Instance.isOver)
         {
-            if(Manager.Instance.lifeCount > 0) Manager.Instance.RoundOver();
-            else Manager.Instance.GameOver();
+            Manager.Instance.GameOver();
         }
         else if (timer > 0)
         {
